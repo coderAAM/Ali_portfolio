@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammed_Ali_Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="mainContainerLeft">
+            <div class="leftContainer">
+                <img src="/Ali.png" alt="Ali_Mughal">
+                <h1>Muhammad Ali <span class="spanText">Mughal</span></h1>
+                <p>Drafting</p>
+                <button id="resume"><a href="/White And Grey Modern CV Resume_20250421_235539_0000.pdf">Download CV</a> </button>
+                <div class="icons">
+                    <a href="https://www.facebook.com/share/14EgSGjPnHF/" id="face" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/in/draftify-ali-b773572a2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" id="face" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    
+                </div>
+                 <div class="locationMap">
+                <i class="fa-solid fa-location-dot"></i><span class="spanText"><span>Pakistan:</span> Karachi</span>
+                <h3>draftworx669@gmail.com</h3>
+                <h5>+92 3162047452</h5>
+                 </div>
+                 <button class="resume"><a href="https://www.fiverr.com/s/2KxNbrQ" target="_blank">Fiverr</a></button>
+                 <button class="resume">Light</button>
+            </div>
+        </div>
+        <div class="mainContainerRight">
+            <div class="navberOne">
+               <a href="#" onclick="showProjects()">Project</a>
+                <a href="#" onclick="showAbout()">About</a>
+                <a href="#" onclick="autoSkills()">Skills</a>
+                <a href="#" onclick="hideAll()">Contact</a>
+                <a href="/Ali.pdf">Resume</a>
+            </div>
+            <div class="about">
+                <h1>About us</h1>
+                <p>I’m a detail-driven MEP specialist and creative content designer, offering high-quality 2D technical drawings for HVAC, plumbing, and fire fighting systems. With a strong focus on safety and execution-ready layouts, I help clients bring precision to their residential, commercial, and industrial projects.
+</p>
+            <a href="#" id="envelope"><i class="fa-regular fa-envelope"></i></a>
+            </div>
+            <div class="heading">
+                <h1>Project's</h1>
+            </div>
+            <div class="card_pages">
+                <div class="card">
+    <img src="/project.png" alt="New Project">
+    <title class="title">Weather App</title>
+    <p>AutoCAD is a powerful computer-aided design (CAD) software developed by Autodesk, widely used by architects, engineers, drafters, and designers for creating precise 2D and 3D drawings. It enables professionals to design and draft with efficiency and accuracy, offering a comprehensive set of tools for drawing, editing, annotating, and modeling.</p>
+</div>
+</div>
+
+ <!-- AutoCAD Skills Section -->
+<section class="autocad-skills" id="autocadSkills">
+  <h2>AutoCAD Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card">2D Drafting</div>
+    <div class="skill-card">3D Modeling</div>
+    <div class="skill-card">Architectural Design</div>
+    <div class="skill-card">Structural Layouts</div>
+    <div class="skill-card">Mechanical Drafting</div>
+    <div class="skill-card">Electrical Schematics</div>
+    <div class="skill-card">Blueprint Reading</div>
+    <div class="skill-card">Layer Management</div>
+    <div class="skill-card">Dimensioning</div>
+    <div class="skill-card">Blocks & Attributes</div>
+    <div class="skill-card">Rendering</div>
+    <div class="skill-card">Plotting & Printing</div>
+  </div>
+</section>
+
+                    <!-- contact section -->
+                    <!-- contact section -->
+<div class="contactContainer" id="contactSection" style="display: none;">
+  <h1>Contact</h1>
+  <form action="https://formspree.io/f/xkgzqnjl" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" placeholder="Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Email" required>
+
+    <label for="message">Message</label>
+    <input type="text" name="message" placeholder="Message" required>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+                     
+                    <footer>
+
+                     <div class="locationMap">
+                    <i class="fa-solid fa-location-dot"></i><span class="spanText"><span>Pakistan:</span> Karachi</span>
+                    <h3>draftworx669@gmail.com</h3>
+                    <h5>+92 3162047452</h5>
+                     </div>
+    
+                    </footer>
+        </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

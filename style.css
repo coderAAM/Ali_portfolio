@@ -1,0 +1,625 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Main Container Setup */
+.mainContainer {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* === LEFT PANEL === */
+.mainContainerLeft {
+    width: 25%;
+    background: linear-gradient(to bottom, #7f00ff, #e100ff);
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 1000;
+    animation: slideInLeft 1s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.leftContainer {
+    text-align: center;
+    width: 100%;
+}
+
+.leftContainer img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid white;
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+.leftContainer img:hover {
+    transform: scale(1.1);
+}
+
+.leftContainer h1 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    transition: color 0.3s;
+}
+
+.leftContainer .spanText {
+    font-style: italic;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.leftContainer .spanText:hover {
+    color: #ffc107;
+}
+
+.leftContainer p {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+/* display none hai */
+#resume  {
+    display: none;
+    background-color: #fff;
+    color: #7f00ff;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.4s ease;
+    text-decoration: none;
+}
+
+#resume:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.icons a {
+    margin: 0 10px;
+    font-size: 2rem;
+    border: 2px solid wheat;
+    border-radius: 60%;
+    background-color: #e100ff;
+    color: #fff;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.icons a:hover {
+    color: black;
+    background-color: white;
+    transform: scale(1.1);
+}
+
+#face i {
+    color: blue;
+}
+
+#you {
+    color: greenyellow;
+}
+
+.locationMap {
+    margin-top: 20px;
+    text-align: center;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #e100ff, #7f00ff);
+    transition: transform 0.4s ease;
+}
+.locationMap:hover {
+    transform: translateY(-5px);
+}
+
+.locationMap i {
+    margin-right: 5px;
+    color: greenyellow;
+}
+
+h3 {
+    font-size: 0.9rem;
+}
+
+.resume {
+    margin-top: 15px;
+    background-color: #fff;
+    color: #7f00ff;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20vw;
+    transition: all 0.4s ease;
+}
+
+.resume a{
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+button{
+    font-size: 1rem;
+}
+
+
+.resume:hover {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+/* === RIGHT PANEL === */
+.mainContainerRight {
+    margin-left: 25%;
+    width: 75%;
+    background-color: #fff;
+    padding: 30px;
+    padding-top: 80px;
+    height: 100vh;
+    overflow-y: auto;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Navigation Links */
+.navberOne {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 75%;
+    background-color: #fff;
+    z-index: 999;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 20px 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.8s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.navberOne a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+
+/* display none hai about */
+.about {
+    text-align: center;
+    display: none;
+}
+
+.about #envelope {
+    font-size: 30px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.about #envelope:hover {
+    background-color: blue;
+    color: white;
+    transform: scale(1.2);
+}
+
+/* Project Cards */
+.card_pages {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.heading{
+    text-align: center;
+}
+/* display None hai card */
+.card {
+    display: none;
+    width: 280px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card .title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+
+.card .title:hover {
+    color: #7f00ff;
+}
+
+.card p {
+    font-size: 14px;
+    color: #000;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .mainContainer {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .mainContainerLeft,
+    .mainContainerRight,
+    .navberOne {
+        width: 100%;
+    }
+
+    .mainContainerLeft {
+        position: relative;
+        height: auto;
+        animation: none;
+    }
+
+    .mainContainerRight {
+        margin-left: 0;
+        padding-top: 80px;
+    }
+
+    .resume {
+        width: 60%;
+    }
+
+    .navberOne {
+        justify-content: center;
+        padding: 15px 20px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card_pages {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .resume {
+        width: 80%;
+    }
+
+    .leftContainer img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .leftContainer h1 {
+        font-size: 18px;
+    }
+
+    #resume {
+        font-size: 16px;
+    }
+
+    .icons a {
+        font-size: 1.5rem;
+    }
+}
+
+footer {
+    justify-content: center;
+    align-items: center;
+}
+
+footer .locationMap h3,
+footer .locationMap h5,
+footer .locationMap span {
+    color: #fff;
+}
+
+
+/* Default light mode (already applied) */
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #111;
+    color: #eee;
+}
+
+body.dark-mode .mainContainerRight {
+    background-color: #222;
+}
+
+body.dark-mode .card {
+    background-color: #333;
+    color: #eee;
+}
+
+body.dark-mode .navberOne {
+    background-color: #222;
+}
+
+body.dark-mode .mainContainerLeft,.card p {
+    background: linear-gradient(to bottom, #e100ff,#7f00ff);
+}
+
+/* contact */
+/* === CONTACT SECTION === */
+.contactContainer {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease;
+}
+
+#contactSection {
+  display: none;
+}
+
+.contactContainer h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #7f00ff;
+}
+
+.contactContainer label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contactContainer input[type="text"],
+.contactContainer input[type="email"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactContainer input[type="text"]:focus,
+.contactContainer input[type="email"]:focus {
+    border-color: #7f00ff;
+    box-shadow: 0 0 8px rgba(127, 0, 255, 0.3);
+    outline: none;
+}
+
+/* Optional submit button (if added later) */
+.contactContainer button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #7f00ff, #e100ff);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contactContainer button:hover {
+    background: linear-gradient(to right, #e100ff, #7f00ff);
+}
+
+/* Dark Mode Support */
+body.dark-mode .contactContainer {
+    background-color: #222;
+    color: #eee;
+}
+
+body.dark-mode .contactContainer label {
+    color: #ddd;
+}
+
+body.dark-mode .contactContainer input {
+    background-color: #333;
+    color: #eee;
+    border: 1px solid #555;
+}
+
+body.dark-mode .contactContainer input:focus {
+    border-color: #e100ff;
+    box-shadow: 0 0 8px rgba(225, 0, 255, 0.3);
+}
+
+/* === AutoCAD Skills Section === */
+.autocad-skills {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.autocad-skills h2 {
+  font-size: 28px;
+  color: #7f00ff;
+  margin-bottom: 25px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.skill-card {
+  background: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #444;
+  border: 1px solid #ddd;
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  background: #7f00ff;
+  color: white;
+  border-color: #7f00ff;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(127, 0, 255, 0.3);
+}
+
+/* Dark mode support */
+body.dark-mode .autocad-skills {
+  background: #222;
+  color: #eee;
+}
+
+body.dark-mode .skill-card {
+  background: #333;
+  color: #ccc;
+  border-color: #444;
+}
+
+body.dark-mode .skill-card:hover {
+  background: #e100ff;
+  color: white;
+  border-color: #e100ff;
+}
+
+/* === AutoCAD Skills Section === */
+.autocad-skills {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: none;
+}
+
+#autocadSkills {
+  display: none; /* Hidden by default */
+}
+
+.autocad-skills h2 {
+  font-size: 28px;
+  color: #7f00ff;
+  margin-bottom: 25px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.skill-card {
+  background: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #444;
+  border: 1px solid #ddd;
+  transition: 0.3s ease;
+}
+
+.skill-card:hover {
+  background: #7f00ff;
+  color: white;
+  border-color: #7f00ff;
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(127, 0, 255, 0.3);
+}
+
+/* Dark mode support */
+body.dark-mode .autocad-skills {
+  background: #222;
+  color: #eee;
+}
+
+body.dark-mode .skill-card {
+  background: #333;
+  color: #ccc;
+  border-color: #444;
+}
+
+body.dark-mode .skill-card:hover {
+  background: #e100ff;
+  color: white;
+  border-color: #e100ff;
+}
+
+
+
+
